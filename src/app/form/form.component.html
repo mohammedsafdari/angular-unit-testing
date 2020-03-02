@@ -1,0 +1,14 @@
+<form id="contact-form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label>Name:
+            <input type="text" class="form-control" formControlName="name">  
+        </label>
+       <label>Email:
+            <input type="text" class="form-control" formControlName="email">  
+        </label>
+        <label>Text:
+            <input type="text" class="form-control" formControlName="text">  
+        </label>
+    </div>
+    <button type="submit" [disabled]="contactForm.invalid" class="btn btn-success">Save</button>
+</form>
